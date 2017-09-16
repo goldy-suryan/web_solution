@@ -1,0 +1,19 @@
+<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <div class="navigation">
+        <ul class="nav navbar-nav navbar-right" *ngFor="let nav of navbar">
+          <li><a href="#{{nav}}" class="smoothScroll">{{ nav | uppercase}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

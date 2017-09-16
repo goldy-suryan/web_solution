@@ -1,0 +1,20 @@
+<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+					<h3>{{title}}</h3>
+					<h4>Smart, Light and Adaptive</h4>
+					<p>Donec rhoncus eu erat quis pellentesque. Vestibulum elementum efficitur quam vel mollis. Morbi nec eros vestibulum, posuere
+						nibh sed, fringilla sapien. Donec ut tincidunt odio.</p>
+					<p>Praesent eu egestas ante, sed eleifend libero. Fusce id nisl vitae lectus posuere feugiat dictum ut purus. Pellentesque
+						eget turpis odio. Suspendisse porttitor sapien eget sem hendrerit, at rutrum tellus accumsan.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s" *ngFor="let s of skills">
+					<span class="text-top"> <small>{{s.skill}} </small></span>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="s.width"><span class="sr-only">70% Complete</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
