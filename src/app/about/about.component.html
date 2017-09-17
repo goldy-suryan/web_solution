@@ -10,7 +10,7 @@
 						eget turpis odio. Suspendisse porttitor sapien eget sem hendrerit, at rutrum tellus accumsan.</p>
 				</div>
 				<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s" *ngFor="let s of skills">
-					<span class="text-top"> <small>{{s.skill}} </small></span>
+					<span class="text-top">{{s.skill}} <small>{{s.width}} </small></span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="s.width"><span class="sr-only">70% Complete</span></div>
 					</div>

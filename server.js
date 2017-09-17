@@ -32,7 +32,7 @@ app.get("*", (req, res) => {
 
 let port = 3000;
 
-app.listen(port, (err) => {
+app.listen(port || process.env.PORT, (err) => {
     if (err) throw new Error("Cannot connect to the server right now");
     console.log("http://localhost:" + port + "/");
 });
