@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgPipesModule } from "ngx-pipes";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -30,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    NgPipesModule
+    NgPipesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

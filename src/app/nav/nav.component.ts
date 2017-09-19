@@ -9,8 +9,8 @@ declare var $: any;
 export class NavComponent implements OnInit {
 
   navbar: string[] = [
-    "contact", "portfolio", "pricing", "team", "about", "service", "home"
-  ];
+    "home", "service", "about", "team", "pricing", "portfolio", "contact"
+  ].reverse();
   constructor() { }
 
   ngOnInit() {
