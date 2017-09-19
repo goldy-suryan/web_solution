@@ -5,20 +5,21 @@
         <h2 class="wow bounce">Meet the team</h2>
       </div>
       <div *ngFor="let member of team; let i = index">
-      <div class="col-md-4 col-sm-4 wow fadeIn" [attr.data-wow-delay]="member.delay">
-        <img src="assets/images/team{{i + 1}}.jpg" class="img-responsive" alt="team img">
-        <h4>{{member.post}}</h4>
-        <h3>{{member.name}}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
-         <ul class="social-icon text-center">
-                 <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
-                 <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
-                 <li><a href="#" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
-                <li><a href="#" class="wow fadeInUp fa fa-pinterest" data-wow-delay="2s"></a></li>
-              </ul>
+        <div class="col-md-4 col-sm-4 wow fadeIn" [attr.data-wow-delay]="member.delay">
+          <img src="assets/images/team{{i + 1}}.jpg" class="img-responsive" alt="team img">
+          <h4>{{member.post}}</h4>
+          <h3>{{member.name}}</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>
+          <ul class="social-icon text-center">
+            <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
+            <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
+            <li><a href="#" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
+            <li><a href="#" class="wow fadeInUp fa fa-pinterest" data-wow-delay="2s"></a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-     
+
     </div>
   </div>
 </div>
+<app-newsletter></app-newsletter>
