@@ -6,7 +6,7 @@ class Db {
     private $password = "";
     private $dbname = "websolution";
 
-    public function connect() {
+    protected function connect() {
         $connection = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
         return $connection;
     }
