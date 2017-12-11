@@ -10,7 +10,7 @@ import { NewsletterService } from './newsletter.service';
 export class NewsletterComponent implements OnInit {
 
   public err: any;
-  public value = { email: "" };
+  public value: Object = { email: "" };
   public response: any;
   
   constructor( private service: NewsletterService ) { }
@@ -24,6 +24,7 @@ export class NewsletterComponent implements OnInit {
       data => this.response = (<any>data)._body,
       err => this.err = err
     );
+    this.value = { email: "" };
   }
 
 }
