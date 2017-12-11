@@ -16,6 +16,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { NewsletterService } from './newsletter/newsletter.service';
+import { ContactService } from './contact/contact.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NewsletterService } from './newsletter/newsletter.service';
     HttpModule
   ],
   providers: [
-    NewsletterService
+    NewsletterService,
+    ContactService
   ],
   bootstrap: [AppComponent]
 })
