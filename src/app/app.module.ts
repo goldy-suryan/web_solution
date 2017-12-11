@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -13,6 +14,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { NewsletterService } from './newsletter/newsletter.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,12 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    NewsletterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
