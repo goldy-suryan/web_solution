@@ -5,9 +5,9 @@
         <h2><strong>{{title}}</strong> Co.</h2>
         <p>Quisque at elit sapien. Sed velit enim, fringilla non suscipit quis, tristique et turpis. Proin vitae nisi justo.</p>
         <ul class="social-icon">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-instagram"></a></li>
+          <li><a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a></li>
+          <li><a href="https://twitter.com" target="_blank" class="fa fa-twitter"></a></li>
+          <li><a href="https://instagram.com" target="_blank" class="fa fa-instagram"></a></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
@@ -18,18 +18,21 @@
           <p><i class="fa fa-envelope-o too-icon"></i> hello@company.com</p>
         </address>
       </div>
-      <form method="post" class="col-md-6 col-sm-4" id="contact-form" role="form" #userForm = "ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <form class="col-md-6 col-sm-4" id="contact-form" role="form">
           <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
-            <input name="name" type="text" class="form-control" id="name" placeholder="Name" ngModel>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="value.name">
           </div>
           <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
-            <input name="email" type="email" class="form-control" id="email" placeholder="Email" ngModel>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="value.email">
           </div>
           <div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Message" ngModel></textarea>
+            <textarea name="message" rows="5" class="form-control" id="message" placeholder="Message" [(ngModel)]="value.message"></textarea>
           </div>
-          <div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-            <input name="submit" type="submit" class="form-control" id="submit" value="Send">
+          <div class="col-md-9 col-sm-6">
+            <span *ngIf="response">{{ response }}</span>
+          </div>
+          <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+            <input name="submit" type="submit" class="form-control" id="submit" value="Send" (click)="onSubmit()">
           </div>
       </form>
     </div>
