@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'app';
 
   ngOnInit() {
-    new WOW().init();
+    new WOW({
+      live: false
+    }).init();
   }
 }
