@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NewsletterService } from './newsletter.service';
+
 @Component({
   selector: 'app-newsletter',
   templateUrl: './newsletter.component.html',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsletterComponent implements OnInit {
 
-  constructor() { }
+  public err: any;
+  public value = { email: "" };
+  public response: any;
+  
+  constructor( private service: NewsletterService ) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.service.createNewsletter(this.value)
+    .subscribe(
+      data => this.response = (<any>data)._body,
+      err => this.err = err
+    );
   }
 
 }
